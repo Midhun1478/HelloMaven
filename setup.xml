@@ -1,0 +1,12 @@
+- name: Some setup
+  hosts: local
+  become: yes
+  tasks:
+    - name: update sys
+      apt:
+        update_cache: yes
+
+    - name: install curl
+      apt:
+        name: curl
+        state: present
